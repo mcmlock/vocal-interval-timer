@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AudioPath" representedClassName="AudioPath" syncable="YES" codeGenerationType="class">
+        <attribute name="link" optional="YES" attributeType="URI"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Interval" representedClassName="Interval" syncable="YES" codeGenerationType="class">
+        <attribute name="beginningAudioString" optional="YES" attributeType="String"/>
+        <attribute name="beginningSelected" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="closingAudio" optional="YES" attributeType="URI"/>
+        <attribute name="color" optional="YES" attributeType="Transformable" valueTransformerName=""/>
+        <attribute name="colorString" optional="YES" attributeType="String"/>
+        <attribute name="midwayAudioString" optional="YES" attributeType="String"/>
+        <attribute name="midwaySelected" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="timeInSeconds" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Template" representedClassName="Template" syncable="YES" codeGenerationType="class">
+        <attribute name="beginningAudios" optional="YES" attributeType="String"/>
+        <attribute name="beginningsSelected" optional="YES" attributeType="String"/>
+        <attribute name="closingAudios" optional="YES" attributeType="String"/>
+        <attribute name="intervalColors" optional="YES" attributeType="String"/>
+        <attribute name="intervalCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="intervalNames" optional="YES" attributeType="String"/>
+        <attribute name="intervalTimes" optional="YES" attributeType="String"/>
+        <attribute name="midwayAudios" optional="YES" attributeType="String"/>
+        <attribute name="midwaysSelected" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="rounds" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="AudioPath" positionX="-54" positionY="18" width="128" height="73"/>
+        <element name="Interval" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="Template" positionX="-27" positionY="72" width="128" height="208"/>
+    </elements>
+</model>

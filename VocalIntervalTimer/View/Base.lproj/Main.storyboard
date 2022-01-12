@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio View Controller-->
+        <scene sceneID="IcB-hp-OLr">
+            <objects>
+                <viewController id="tjE-3T-jHg" customClass="AudioViewController" customModule="VocalIntervalTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gWR-Th-bN5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Recordings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJa-7B-Xgn">
+                                <rect key="frame" x="20" y="44" width="213" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pcp-Pz-i1o">
+                                <rect key="frame" x="20" y="144" width="374" height="649"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="60c-xu-OeF">
+                                <rect key="frame" x="40" y="803" width="334" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDP-Nm-cQ6">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="49"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                        <state key="normal" title="Import">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="importPressed:" destination="tjE-3T-jHg" eventType="touchUpInside" id="PvF-Hz-3w4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOR-Lo-kdW">
+                                        <rect key="frame" x="244" y="0.0" width="90" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="V9K-Wy-fMT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <state key="normal" title="&gt;">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backHomePressed:" destination="tjE-3T-jHg" eventType="touchUpInside" id="xaF-07-hWe"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="homeFromAudio" animates="NO" modalPresentationStyle="fullScreen" id="fip-4Y-fEP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0oP-OG-un1">
+                                <rect key="frame" x="30" y="93" width="354" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCi-O6-EK3">
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <state key="normal" title="Delete All">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteAllPressed:" destination="tjE-3T-jHg" eventType="touchUpInside" id="DKE-Ys-1Qq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMM-ig-iUh">
+                                        <rect key="frame" x="278" y="0.0" width="76" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <state key="normal" title="Reorder">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reorderPressed:" destination="tjE-3T-jHg" eventType="touchUpInside" id="I5z-oy-v1z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ASa-KT-fQj"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pcp-Pz-i1o" firstAttribute="leading" secondItem="ASa-KT-fQj" secondAttribute="leading" constant="20" id="Abr-cj-x8g"/>
+                            <constraint firstItem="DJa-7B-Xgn" firstAttribute="top" secondItem="ASa-KT-fQj" secondAttribute="top" id="CS1-cc-JOd"/>
+                            <constraint firstItem="DJa-7B-Xgn" firstAttribute="leading" secondItem="ASa-KT-fQj" secondAttribute="leading" constant="20" id="D3Z-4f-fZT"/>
+                            <constraint firstItem="ASa-KT-fQj" firstAttribute="bottom" secondItem="60c-xu-OeF" secondAttribute="bottom" constant="10" id="LXX-ld-h0K"/>
+                            <constraint firstItem="pcp-Pz-i1o" firstAttribute="top" secondItem="0oP-OG-un1" secondAttribute="bottom" constant="10" id="PmJ-9N-Iu4"/>
+                            <constraint firstItem="0oP-OG-un1" firstAttribute="leading" secondItem="ASa-KT-fQj" secondAttribute="leading" constant="30" id="fv0-HL-26o"/>
+                            <constraint firstItem="60c-xu-OeF" firstAttribute="top" secondItem="pcp-Pz-i1o" secondAttribute="bottom" constant="10" id="g9v-H3-IVA"/>
+                            <constraint firstItem="ASa-KT-fQj" firstAttribute="trailing" secondItem="0oP-OG-un1" secondAttribute="trailing" constant="30" id="hR2-BR-Nzu"/>
+                            <constraint firstItem="0oP-OG-un1" firstAttribute="top" secondItem="DJa-7B-Xgn" secondAttribute="bottom" constant="10" id="mxG-PP-9vV"/>
+                            <constraint firstItem="ASa-KT-fQj" firstAttribute="trailing" secondItem="pcp-Pz-i1o" secondAttribute="trailing" constant="20" id="v5T-wv-1h0"/>
+                            <constraint firstItem="60c-xu-OeF" firstAttribute="leading" secondItem="ASa-KT-fQj" secondAttribute="leading" constant="40" id="yJm-Zj-TQf"/>
+                            <constraint firstItem="ASa-KT-fQj" firstAttribute="trailing" secondItem="60c-xu-OeF" secondAttribute="trailing" constant="40" id="ydV-wc-nkV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="audioTableView" destination="pcp-Pz-i1o" id="RKE-la-115"/>
+                        <outlet property="reorderButton" destination="fMM-ig-iUh" id="ncD-7U-cu9"/>
+                        <outlet property="titleLabel" destination="DJa-7B-Xgn" id="vA9-fy-65S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z6B-hz-t15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1065" y="94"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="VocalIntervalTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qa7-Zw-jeV">
+                                <rect key="frame" x="30" y="97.5" width="354" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9P1-i0-EQ5">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8T-Ov-paZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2r-N3-kUa">
+                                        <rect key="frame" x="278" y="0.0" width="76" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <state key="normal" title="Reorder">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reorderPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z1h-Ho-gP0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="wJW-2O-aQJ">
+                                <rect key="frame" x="20" y="809" width="374" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZ1-92-Mdy">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="48"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
+                                        <state key="normal" title="Begin">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="beginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mey-Fs-W81"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hu8-bb-zJ5">
+                                        <rect key="frame" x="207" y="0.0" width="167" height="48"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
+                                        <state key="normal" title="+Interval">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="izh-cQ-Ckk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iqB-yM-VCv">
+                                <rect key="frame" x="20" y="760" width="374" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tr-mM-EUe">
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="44"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                        <state key="normal" title="Audio">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tjE-3T-jHg" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Wkc-eF-tdW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ab-aQ-j2z">
+                                        <rect key="frame" x="281" y="0.0" width="93" height="44"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                        <state key="normal" title="Routines">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="routinesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T5K-u2-PF7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iNt-Px-y41" userLabel="Top SV">
+                                <rect key="frame" x="20" y="49" width="374" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAd-QZ-SOT">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="43.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bIO-1u-G4s" userLabel="Rounds SV">
+                                        <rect key="frame" x="222.5" y="0.0" width="151.5" height="43.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-JM-RLo">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="43.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="03" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TaS-c0-jjR">
+                                                <rect key="frame" x="89.5" y="0.0" width="62" height="43.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="26"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z1Z-Ee-UkQ">
+                                <rect key="frame" x="20" y="148.5" width="374" height="601.5"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wJW-2O-aQJ" secondAttribute="trailing" constant="20" id="78J-5B-4o3"/>
+                            <constraint firstItem="wJW-2O-aQJ" firstAttribute="top" secondItem="iqB-yM-VCv" secondAttribute="bottom" constant="5" id="CaB-9T-hn2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z1Z-Ee-UkQ" secondAttribute="trailing" constant="20" id="Lm6-B3-VF0"/>
+                            <constraint firstItem="iNt-Px-y41" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="MZC-Oz-zUS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iNt-Px-y41" secondAttribute="trailing" constant="20" id="Pm7-00-acZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wJW-2O-aQJ" secondAttribute="bottom" constant="5" id="SKv-4b-JbX"/>
+                            <constraint firstItem="iNt-Px-y41" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WQg-iy-AAl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iNt-Px-y41" secondAttribute="trailing" constant="20" id="ZLZ-Oh-g6z"/>
+                            <constraint firstItem="Qa7-Zw-jeV" firstAttribute="top" secondItem="iNt-Px-y41" secondAttribute="bottom" constant="5" id="h9u-XF-pIY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qa7-Zw-jeV" secondAttribute="trailing" constant="30" id="i9K-Rm-Ooi"/>
+                            <constraint firstItem="iNt-Px-y41" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nDh-cz-ONt"/>
+                            <constraint firstItem="z1Z-Ee-UkQ" firstAttribute="top" secondItem="Qa7-Zw-jeV" secondAttribute="bottom" constant="10" id="ozv-iv-rJV"/>
+                            <constraint firstItem="iqB-yM-VCv" firstAttribute="top" secondItem="z1Z-Ee-UkQ" secondAttribute="bottom" constant="10" id="py1-bl-3Ws"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iqB-yM-VCv" secondAttribute="trailing" constant="20" id="qp2-Vy-BLp"/>
+                            <constraint firstItem="z1Z-Ee-UkQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tfI-Y0-RsK"/>
+                            <constraint firstItem="wJW-2O-aQJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yHi-Jd-Gkd"/>
+                            <constraint firstItem="iqB-yM-VCv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zDZ-D5-pmd"/>
+                            <constraint firstItem="Qa7-Zw-jeV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zq9-np-l1n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="intervalsTableView" destination="z1Z-Ee-UkQ" id="YJm-TZ-ZnF"/>
+                        <outlet property="reorderButton" destination="l2r-N3-kUa" id="7Rx-SD-c04"/>
+                        <outlet property="roundsTextField" destination="TaS-c0-jjR" id="yZh-Ew-miS"/>
+                        <outlet property="totalTimeLabel" destination="NAd-QZ-SOT" id="Ycq-fy-hHc"/>
+                        <segue destination="SBg-NR-BQp" kind="presentation" identifier="beginWorkout" animates="NO" modalPresentationStyle="fullScreen" id="9dI-CH-2Po"/>
+                        <segue destination="idq-8f-FKe" kind="presentation" identifier="addInterval" animates="NO" modalPresentationStyle="fullScreen" id="A5Q-RO-Ldp"/>
+                        <segue destination="idq-8f-FKe" kind="presentation" identifier="editInterval" id="oa8-xQ-Meg"/>
+                        <segue destination="xbV-zt-gZZ" kind="presentation" identifier="goToRoutines" animates="NO" modalPresentationStyle="fullScreen" id="s9g-ku-GCi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="93.75"/>
+        </scene>
+        <!--Saved Routines View Controller-->
+        <scene sceneID="tKH-yd-3oy">
+            <objects>
+                <viewController id="xbV-zt-gZZ" customClass="SavedRoutinesViewController" customModule="VocalIntervalTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cr5-pp-ro0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Routines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDu-Pb-tth">
+                                <rect key="frame" x="20" y="44" width="184.5" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5f4-Ky-Ugi">
+                                <rect key="frame" x="20" y="93" width="374" height="700"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Coi-VO-1Ei">
+                                <rect key="frame" x="40" y="803" width="334" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IW-ai-mHc">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="49"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                        <state key="normal" title="Create">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createPressed:" destination="xbV-zt-gZZ" eventType="touchUpInside" id="Mbh-Yd-yQa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gA-Bt-XoX">
+                                        <rect key="frame" x="244" y="0.0" width="90" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="Ce0-FP-0mJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <state key="normal" title="&gt;">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backPressed:" destination="xbV-zt-gZZ" eventType="touchUpInside" id="Wj5-4p-m9V"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jhq-8Q-l7Y"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jhq-8Q-l7Y" firstAttribute="trailing" secondItem="Coi-VO-1Ei" secondAttribute="trailing" constant="40" id="96U-wL-mTP"/>
+                            <constraint firstItem="5f4-Ky-Ugi" firstAttribute="top" secondItem="GDu-Pb-tth" secondAttribute="bottom" constant="10" id="EYg-Rv-SSh"/>
+                            <constraint firstItem="GDu-Pb-tth" firstAttribute="top" secondItem="Jhq-8Q-l7Y" secondAttribute="top" id="PfC-NQ-7wF"/>
+                            <constraint firstItem="Coi-VO-1Ei" firstAttribute="top" secondItem="5f4-Ky-Ugi" secondAttribute="bottom" constant="10" id="Pnt-6W-r7X"/>
+                            <constraint firstItem="Coi-VO-1Ei" firstAttribute="leading" secondItem="Jhq-8Q-l7Y" secondAttribute="leading" constant="40" id="QIT-uX-LS0"/>
+                            <constraint firstItem="GDu-Pb-tth" firstAttribute="leading" secondItem="Jhq-8Q-l7Y" secondAttribute="leading" constant="20" id="R7v-wC-KyI"/>
+                            <constraint firstItem="Jhq-8Q-l7Y" firstAttribute="trailing" secondItem="5f4-Ky-Ugi" secondAttribute="trailing" constant="20" id="flW-Jp-DVe"/>
+                            <constraint firstItem="5f4-Ky-Ugi" firstAttribute="leading" secondItem="Jhq-8Q-l7Y" secondAttribute="leading" constant="20" id="fyp-yP-oB5"/>
+                            <constraint firstItem="Jhq-8Q-l7Y" firstAttribute="bottom" secondItem="Coi-VO-1Ei" secondAttribute="bottom" constant="10" id="lta-FH-YZI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="templatesTableView" destination="5f4-Ky-Ugi" id="pvw-vc-tUV"/>
+                        <outlet property="titleLabel" destination="GDu-Pb-tth" id="dEN-zt-G7E"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="homeFromRoutines" animates="NO" modalPresentationStyle="fullScreen" id="dIt-me-57n"/>
+                        <segue destination="sNB-qA-WDl" kind="presentation" identifier="createTemplate" animates="NO" modalPresentationStyle="fullScreen" id="dxJ-eM-zu9"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="loadTemplate" animates="NO" modalPresentationStyle="fullScreen" id="rhs-KI-Jm0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KOX-cE-wkJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="94"/>
+        </scene>
+        <!--Create Routine View Controller-->
+        <scene sceneID="6Ze-CO-aKG">
+            <objects>
+                <viewController id="sNB-qA-WDl" customClass="CreateRoutineViewController" customModule="VocalIntervalTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9KK-aM-mGW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Routine Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Avy-9b-8M4">
+                                <rect key="frame" x="70" y="69" width="274.5" height="48.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="S8d-8z-p4k">
+                                <rect key="frame" x="20" y="142.5" width="374" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEl-V9-P7X">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="43.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IKq-pT-v3l">
+                                        <rect key="frame" x="212.5" y="0.0" width="161.5" height="43.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rounds:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDN-2Y-nPo">
+                                                <rect key="frame" x="0.0" y="0.0" width="89.5" height="43.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="03" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JYR-It-mA2">
+                                                <rect key="frame" x="99.5" y="0.0" width="62" height="43.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="26"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oO4-8R-iea">
+                                <rect key="frame" x="30" y="191" width="354" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOo-Eh-SEs">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearPressed:" destination="sNB-qA-WDl" eventType="touchUpInside" id="b3B-nk-F1V"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k8-dr-Mrl">
+                                        <rect key="frame" x="278" y="0.0" width="76" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <state key="normal" title="Reorder">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reorderPressed:" destination="sNB-qA-WDl" eventType="touchUpInside" id="9fg-6Z-CH9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4dP-Pg-eRL">
+                                <rect key="frame" x="20" y="242" width="374" height="502"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="m3D-h9-10i">
+                                <rect key="frame" x="20" y="809" width="374" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdG-fF-gfP">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="48"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="savePressed:" destination="sNB-qA-WDl" eventType="touchUpInside" id="0wh-FK-jQh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGv-Y1-IzL">
+                                        <rect key="frame" x="207" y="0.0" width="167" height="48"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
+                                        <state key="normal" title="+Interval">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addPressed:" destination="sNB-qA-WDl" eventType="touchUpInside" id="nv4-HI-O0r"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD0-YU-TAD">
+                                <rect key="frame" x="8" y="58" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sH9-Da-SRa">
+                                <rect key="frame" x="20" y="754" width="374" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHd-Im-6lG">
+                                        <rect key="frame" x="0.0" y="2" width="76" height="46"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="26"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="xbV-zt-gZZ" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Rdb-iT-ys7"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBb-c2-d6D">
+                                        <rect key="frame" x="207" y="0.0" width="167" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="myW-uZ-4rC"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="myW-uZ-4rC" firstAttribute="trailing" secondItem="S8d-8z-p4k" secondAttribute="trailing" constant="20" id="3UM-tt-Sd7"/>
+                            <constraint firstItem="4dP-Pg-eRL" firstAttribute="top" secondItem="oO4-8R-iea" secondAttribute="bottom" constant="10" id="6Ma-nj-J7d"/>
+                            <constraint firstItem="myW-uZ-4rC" firstAttribute="trailing" secondItem="4dP-Pg-eRL" secondAttribute="trailing" constant="20" id="6uU-5J-Fhx"/>
+                            <constraint firstItem="myW-uZ-4rC" firstAttribute="trailing" secondItem="oO4-8R-iea" secondAttribute="trailing" constant="30" id="9n0-cC-6RT"/>
+                            <constraint firstItem="myW-uZ-4rC" firstAttribute="trailing" secondItem="m3D-h9-10i" secondAttribute="trailing" constant="20" id="DyA-us-uLZ"/>
+                            <constraint firstItem="myW-uZ-4rC" firstAttribute="trailing" secondItem="sH9-Da-SRa" secondAttribute="trailing" constant="20" id="FZf-wX-QBx"/>
+                            <constraint firstItem="sH9-Da-SRa" firstAttribute="top" secondItem="4dP-Pg-eRL" secondAttribute="bottom" constant="10" id="Ll7-Fr-3H0"/>
+                            <constraint firstItem="myW-uZ-4rC" firstAttribute="bottom" secondItem="m3D-h9-10i" secondAttribute="bottom" constant="5" id="N7f-TE-Uvk"/>
+                            <constraint firstItem="m3D-h9-10i" firstAttribute="top" secondItem="sH9-Da-SRa" secondAttribute="bottom" constant="5" id="NT3-Sh-PyH"/>
+                            <constraint firstItem="4dP-Pg-eRL" firstAttribute="leading" secondItem="myW-uZ-4rC" secondAttribute="leading" constant="20" id="Qnu-mC-7DS"/>
+                            <constraint firstItem="oO4-8R-iea" firstAttribute="leading" secondItem="myW-uZ-4rC" secondAttribute="leading" constant="30" id="T4d-fH-IoG"/>
+                            <constraint firstItem="S8d-8z-p4k" firstAttribute="top" secondItem="Avy-9b-8M4" secondAttribute="bottom" constant="25" id="Tfr-d9-Cdh"/>
+                            <constraint firstItem="Avy-9b-8M4" firstAttribute="centerX" secondItem="9KK-aM-mGW" secondAttribute="centerX" id="dEB-Ed-Ikt"/>
+                            <constraint firstItem="m3D-h9-10i" firstAttribute="leading" secondItem="myW-uZ-4rC" secondAttribute="leading" constant="20" id="fdl-ug-sAB"/>
+                            <constraint firstItem="sH9-Da-SRa" firstAttribute="leading" secondItem="myW-uZ-4rC" secondAttribute="leading" constant="20" id="gmQ-ll-W0g"/>
+                            <constraint firstItem="oO4-8R-iea" firstAttribute="top" secondItem="S8d-8z-p4k" secondAttribute="bottom" constant="5" id="oda-T7-Eus"/>
+                            <constraint firstItem="S8d-8z-p4k" firstAttribute="leading" secondItem="myW-uZ-4rC" secondAttribute="leading" constant="20" id="yYb-Q7-vOD"/>
+                            <constraint firstItem="Avy-9b-8M4" firstAttribute="top" secondItem="myW-uZ-4rC" secondAttribute="top" constant="25" id="ycI-Mw-Bwk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="intervalsTableView" destination="4dP-Pg-eRL" id="JvV-hI-vbG"/>
+                        <outlet property="reorderButton" destination="9k8-dr-Mrl" id="c4j-nL-L1C"/>
+                        <outlet property="roundsTextField" destination="JYR-It-mA2" id="Ckd-YO-ZlI"/>
+                        <outlet property="templateNameTextField" destination="Avy-9b-8M4" id="L9u-rn-RGZ"/>
+                        <outlet property="totalTimeLabel" destination="HEl-V9-P7X" id="HVZ-f4-rbM"/>
+                        <segue destination="xbV-zt-gZZ" kind="presentation" identifier="toSavedFromCreate" animates="NO" modalPresentationStyle="fullScreen" id="pFc-42-L5C"/>
+                        <segue destination="idq-8f-FKe" kind="presentation" identifier="addInterval2" animates="NO" modalPresentationStyle="fullScreen" id="DrR-7u-aaA"/>
+                        <segue destination="idq-8f-FKe" kind="presentation" identifier="editInterval2" animates="NO" modalPresentationStyle="fullScreen" id="iGy-MZ-Lcu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXs-iZ-af1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1525" y="94"/>
+        </scene>
+        <!--Workout View Controller-->
+        <scene sceneID="ZX4-YR-LP9">
+            <objects>
+                <viewController id="SBg-NR-BQp" customClass="WorkoutViewController" customModule="VocalIntervalTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="079-cF-Qnf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oMr-Po-FvC">
+                                <rect key="frame" x="20" y="132" width="374" height="661"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRV-IO-xYS">
+                                <rect key="frame" x="107.5" y="44" width="199" height="78"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2eC-tU-0EW">
+                                <rect key="frame" x="30" y="803" width="354" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ot9-9H-aq2">
+                                        <rect key="frame" x="0.0" y="0.0" width="157" height="49"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                        <state key="normal" title="End">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="endPressed:" destination="SBg-NR-BQp" eventType="touchUpInside" id="IzO-1h-Ox4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdI-de-ZJU">
+                                        <rect key="frame" x="197" y="0.0" width="157" height="49"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                        <state key="normal" title="Pause">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pausePressed:" destination="SBg-NR-BQp" eventType="touchUpInside" id="bUA-Ry-UHh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fvR-9L-ZQO"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2eC-tU-0EW" firstAttribute="top" secondItem="oMr-Po-FvC" secondAttribute="bottom" constant="10" id="8OI-d0-y0a"/>
+                            <constraint firstItem="fvR-9L-ZQO" firstAttribute="bottom" secondItem="2eC-tU-0EW" secondAttribute="bottom" constant="10" id="8wv-Lw-Dnu"/>
+                            <constraint firstItem="oRV-IO-xYS" firstAttribute="centerX" secondItem="079-cF-Qnf" secondAttribute="centerX" id="RIA-lK-hCI"/>
+                            <constraint firstItem="2eC-tU-0EW" firstAttribute="leading" secondItem="fvR-9L-ZQO" secondAttribute="leading" constant="30" id="S1B-NQ-M12"/>
+                            <constraint firstItem="oMr-Po-FvC" firstAttribute="leading" secondItem="fvR-9L-ZQO" secondAttribute="leading" constant="20" id="UeF-t5-iDs"/>
+                            <constraint firstItem="fvR-9L-ZQO" firstAttribute="trailing" secondItem="2eC-tU-0EW" secondAttribute="trailing" constant="30" id="W1x-A4-jMR"/>
+                            <constraint firstItem="oMr-Po-FvC" firstAttribute="top" secondItem="oRV-IO-xYS" secondAttribute="bottom" constant="10" id="c0C-Ep-4qg"/>
+                            <constraint firstItem="oRV-IO-xYS" firstAttribute="top" secondItem="fvR-9L-ZQO" secondAttribute="top" id="ltM-OQ-AGD"/>
+                            <constraint firstItem="fvR-9L-ZQO" firstAttribute="trailing" secondItem="oMr-Po-FvC" secondAttribute="trailing" constant="20" id="pIN-5K-uRU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="intervalsTableView" destination="oMr-Po-FvC" id="3K5-sm-mPs"/>
+                        <outlet property="pauseButton" destination="XdI-de-ZJU" id="EJx-uy-kKA"/>
+                        <outlet property="totalTimeLabel" destination="oRV-IO-xYS" id="xUr-oO-951"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="endWorkout" animates="NO" modalPresentationStyle="fullScreen" id="Mlw-W1-CE7"/>
+                        <segue destination="0XT-qI-PC5" kind="presentation" identifier="workoutComplete" animates="NO" modalPresentationStyle="fullScreen" id="QmQ-PN-aWh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YdE-sV-qCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-577" y="830"/>
+        </scene>
+        <!--Add Interval View Controller-->
+        <scene sceneID="L9Q-4d-1hg">
+            <objects>
+                <viewController id="idq-8f-FKe" customClass="AddIntervalViewController" customModule="VocalIntervalTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fKH-iU-pk7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="huS-R2-KVl">
+                                <rect key="frame" x="69" y="213.5" width="276" height="309"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fjc-vG-JeK">
+                                        <rect key="frame" x="14" y="0.0" width="248" height="143"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xGz-3m-BwV">
+                                                <rect key="frame" x="6" y="0.0" width="236" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZm-44-wHl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="41"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Shadow Box" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lBZ-w3-S5B">
+                                                        <rect key="frame" x="81" y="0.0" width="155" height="41"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R9w-xk-e9M">
+                                                <rect key="frame" x="0.0" y="51" width="248" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fk-Tg-mCr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="41"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fv0-zF-bh2">
+                                                        <rect key="frame" x="113.5" y="0.0" width="134.5" height="41"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="01" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jkh-GL-Zrz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="59.5" height="41"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gU-U4-vaP">
+                                                                <rect key="frame" x="64.5" y="0.0" width="5.5" height="41"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="30" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvk-HV-ThI">
+                                                                <rect key="frame" x="75" y="0.0" width="59.5" height="41"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NuI-Ur-e19">
+                                                <rect key="frame" x="35" y="102" width="178.5" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duplicate: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYJ-cN-Hzb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="41"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="03" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c9y-th-9d8">
+                                                        <rect key="frame" x="119" y="0.0" width="59.5" height="41"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0ZL-fg-Yiz">
+                                        <rect key="frame" x="0.0" y="158" width="276" height="151"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="U6h-Jw-2a6">
+                                                <rect key="frame" x="0.0" y="0.0" width="276" height="45"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WM-SW-lEk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="44.5" height="45"/>
+                                                        <color key="backgroundColor" red="0.83921568627450982" green="0.0039215686269999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="xJr-S2-Jw0"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrU-XB-VaZ">
+                                                        <rect key="frame" x="77.5" y="0.0" width="44" height="45"/>
+                                                        <color key="backgroundColor" red="0.99740082029999999" green="0.56490278240000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="RJe-FP-eYl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqg-aO-yGb">
+                                                        <rect key="frame" x="154.5" y="0.0" width="44.5" height="45"/>
+                                                        <color key="backgroundColor" red="0.99741178750000004" green="0.86844056839999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="U2o-Ut-NoC"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKU-wT-Z4v">
+                                                        <rect key="frame" x="232" y="0.0" width="44" height="45"/>
+                                                        <color key="backgroundColor" red="0.99869889020000002" green="0.33550292250000002" blue="0.73728150130000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="ybs-mM-AA3"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="piH-hs-tzK"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="NkT-n2-qSq">
+                                                <rect key="frame" x="0.0" y="53" width="276" height="45"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHF-cy-Fn9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" red="0.045565545559999997" green="0.0" blue="0.80004841090000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="SGf-Mo-7Ar"/>
+                                                            <constraint firstAttribute="width" constant="45" id="ThL-Yb-92R"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="WdV-gw-EIa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ki-aU-9dC">
+                                                        <rect key="frame" x="77" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" red="0.00040187852570000001" green="0.77349120380000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="pha-t6-N3K"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNp-nU-Psy">
+                                                        <rect key="frame" x="154" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" red="0.71764705880000002" green="0.074509803920000006" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="Tst-W9-qd0"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuC-Se-V4p">
+                                                        <rect key="frame" x="231" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" red="0.088376380500000004" green="0.64774924519999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="xF4-Nw-i7J"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="9Mf-aV-yOa">
+                                                <rect key="frame" x="0.0" y="106" width="276" height="45"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98t-xn-dZL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" red="0.13714832069999999" green="0.12560692430000001" blue="0.1176458821" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="ILx-3j-Z2m"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="9sH-8r-bPO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh5-uV-Ugh">
+                                                        <rect key="frame" x="77" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" white="0.82186429790000004" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="hXP-7M-qVd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpK-1M-1bq">
+                                                        <rect key="frame" x="154" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" red="0.321480602" green="0.30588662620000001" blue="0.30588233469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="xtE-1j-NSy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udG-pV-5DO">
+                                                        <rect key="frame" x="231" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" red="0.54380124809999997" green="0.27966234089999997" blue="0.19605442880000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorSelected:" destination="idq-8f-FKe" eventType="touchUpInside" id="bng-jR-yNu"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="g9Z-H9-swL">
+                                <rect key="frame" x="40" y="803" width="334" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXV-m8-lnb">
+                                        <rect key="frame" x="0.0" y="0.0" width="151.5" height="49"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelPressed:" destination="idq-8f-FKe" eventType="touchUpInside" id="CK1-7r-CaK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xez-7T-96u">
+                                        <rect key="frame" x="191.5" y="0.0" width="142.5" height="49"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="donePressed:" destination="idq-8f-FKe" eventType="touchUpInside" id="zrT-DP-4mb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XYT-lZ-xWo">
+                                <rect key="frame" x="20" y="532.5" width="374" height="143"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="faH-YK-gxT">
+                                        <rect key="frame" x="112.5" y="0.0" width="149" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beginning:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXV-Sc-uGH">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="41"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmL-p3-Ivm">
+                                                <rect key="frame" x="110" y="0.0" width="39" height="41"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                <state key="normal" title="N/A">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="beginningSelectPressed:" destination="idq-8f-FKe" eventType="touchUpInside" id="JqK-zP-wHK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R3y-Us-4dw">
+                                        <rect key="frame" x="120.5" y="51" width="133.5" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Midway:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1c-Bl-xVL">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="41"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="HWg-cm-d7s">
+                                                <rect key="frame" x="94.5" y="0.0" width="39" height="41"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                <state key="normal" title="N/A">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="midwaySelectPressed:" destination="idq-8f-FKe" eventType="touchUpInside" id="m6J-es-CvS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8L4-9K-iCz">
+                                        <rect key="frame" x="110" y="102" width="154" height="41"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zu4-jm-zTy">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closing:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPP-7d-IQ1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="41"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="z1Q-zK-fl5">
+                                                <rect key="frame" x="84" y="0.0" width="70" height="41"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                <state key="normal" title="Default">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="closingSelectPressed:" destination="idq-8f-FKe" eventType="touchUpInside" id="D2c-eT-Z3R"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="95I-4q-hdY"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g9Z-H9-swL" firstAttribute="leading" secondItem="95I-4q-hdY" secondAttribute="leading" constant="40" id="7th-wM-QyY"/>
+                            <constraint firstAttribute="trailing" secondItem="XYT-lZ-xWo" secondAttribute="trailing" constant="20" id="I3U-NZ-40X"/>
+                            <constraint firstItem="XYT-lZ-xWo" firstAttribute="centerX" secondItem="fKH-iU-pk7" secondAttribute="centerX" id="Kpb-jK-yDj"/>
+                            <constraint firstItem="huS-R2-KVl" firstAttribute="centerY" secondItem="fKH-iU-pk7" secondAttribute="centerY" constant="-80" id="MVx-Vj-gls"/>
+                            <constraint firstItem="huS-R2-KVl" firstAttribute="centerX" secondItem="fKH-iU-pk7" secondAttribute="centerX" id="Opl-ec-u8K"/>
+                            <constraint firstItem="95I-4q-hdY" firstAttribute="bottom" secondItem="g9Z-H9-swL" secondAttribute="bottom" constant="10" id="W7G-2z-oBd"/>
+                            <constraint firstItem="XYT-lZ-xWo" firstAttribute="top" secondItem="huS-R2-KVl" secondAttribute="bottom" constant="10" id="XqB-nX-d8e"/>
+                            <constraint firstItem="95I-4q-hdY" firstAttribute="trailing" secondItem="g9Z-H9-swL" secondAttribute="trailing" constant="40" id="bWO-BY-8J8"/>
+                            <constraint firstItem="XYT-lZ-xWo" firstAttribute="leading" secondItem="fKH-iU-pk7" secondAttribute="leading" constant="20" id="gSz-NI-ccY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beginningAudioName" destination="xmL-p3-Ivm" id="hNZ-O5-fMz"/>
+                        <outlet property="blackButton" destination="98t-xn-dZL" id="gYI-an-Qh1"/>
+                        <outlet property="brownButton" destination="udG-pV-5DO" id="3A4-Yp-Jn9"/>
+                        <outlet property="closingAudioName" destination="z1Q-zK-fl5" id="6gq-4r-NUr"/>
+                        <outlet property="darkBlueButton" destination="tHF-cy-Fn9" id="kpw-9L-Bz4"/>
+                        <outlet property="duplicateTextField" destination="c9y-th-9d8" id="YO2-lt-RYK"/>
+                        <outlet property="greenButton" destination="0ki-aU-9dC" id="2Zk-AS-j32"/>
+                        <outlet property="greyButton" destination="FpK-1M-1bq" id="6aG-iF-1UX"/>
+                        <outlet property="lightBlueButton" destination="uuC-Se-V4p" id="TxP-Z3-Gn7"/>
+                        <outlet property="midwayAudioName" destination="HWg-cm-d7s" id="mUC-UW-xCF"/>
+                        <outlet property="minutesTextField" destination="Jkh-GL-Zrz" id="WvV-vu-BJ3"/>
+                        <outlet property="nameTextField" destination="lBZ-w3-S5B" id="DJj-ea-HRB"/>
+                        <outlet property="orangeButton" destination="XrU-XB-VaZ" id="gSQ-dC-jIW"/>
+                        <outlet property="pinkButton" destination="GKU-wT-Z4v" id="1rq-D5-7fS"/>
+                        <outlet property="purpleButton" destination="XNp-nU-Psy" id="Bec-me-tXa"/>
+                        <outlet property="redButton" destination="2WM-SW-lEk" id="Mnl-8j-DYO"/>
+                        <outlet property="secondsTextField" destination="xvk-HV-ThI" id="5AW-gp-M2L"/>
+                        <outlet property="whiteButton" destination="Nh5-uV-Ugh" id="Rzh-M3-IYH"/>
+                        <outlet property="yellowButton" destination="Qqg-aO-yGb" id="rUm-Fd-4cw"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="intervalAdded" animates="NO" modalPresentationStyle="fullScreen" id="gWj-RR-VuJ"/>
+                        <segue destination="zPN-x0-dMO" kind="presentation" identifier="selectClosingAudio" id="uCM-Tp-YZL"/>
+                        <segue destination="zPN-x0-dMO" kind="presentation" identifier="selectMidwayAudio" id="yaW-dD-TFX"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="editMade" animates="NO" modalPresentationStyle="fullScreen" id="U7U-r5-LxP"/>
+                        <segue destination="zPN-x0-dMO" kind="presentation" identifier="selectBeginningAudio" id="pPN-Zn-zij"/>
+                        <segue destination="sNB-qA-WDl" kind="presentation" identifier="intervalAdded2" animates="NO" modalPresentationStyle="fullScreen" id="LUY-8Z-CKR"/>
+                        <segue destination="sNB-qA-WDl" kind="presentation" identifier="editMade2" animates="NO" modalPresentationStyle="fullScreen" id="e0T-Jc-MYK"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="cancelToHome" animates="NO" modalPresentationStyle="fullScreen" id="zBE-pl-4SZ"/>
+                        <segue destination="sNB-qA-WDl" kind="presentation" identifier="cancelToCreate" animates="NO" modalPresentationStyle="fullScreen" id="ccu-Gg-372"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqq-dS-QAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="830"/>
+        </scene>
+        <!--Completed View Controller-->
+        <scene sceneID="q5z-1s-YOf">
+            <objects>
+                <viewController id="0XT-qI-PC5" customClass="CompletedViewController" customModule="VocalIntervalTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G5Z-bM-Y9J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Complete!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeY-Xu-NcO">
+                                <rect key="frame" x="20" y="270" width="374" height="156"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIo-bE-EHZ">
+                                <rect key="frame" x="160" y="750" width="94" height="62"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="38"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="homePressed:" destination="0XT-qI-PC5" eventType="touchUpInside" id="x1w-vi-lMQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tWL-gx-emm"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aeY-Xu-NcO" firstAttribute="centerY" secondItem="G5Z-bM-Y9J" secondAttribute="centerY" constant="-100" id="3rU-II-v5p"/>
+                            <constraint firstItem="aeY-Xu-NcO" firstAttribute="leading" secondItem="G5Z-bM-Y9J" secondAttribute="leading" constant="20" id="7MD-mz-pYJ"/>
+                            <constraint firstItem="aeY-Xu-NcO" firstAttribute="centerX" secondItem="G5Z-bM-Y9J" secondAttribute="centerX" id="Dlc-ZJ-yui"/>
+                            <constraint firstAttribute="trailing" secondItem="aeY-Xu-NcO" secondAttribute="trailing" constant="20" id="Okt-4E-rIh"/>
+                            <constraint firstItem="tWL-gx-emm" firstAttribute="bottom" secondItem="XIo-bE-EHZ" secondAttribute="bottom" constant="50" id="S7l-Ib-Vka"/>
+                            <constraint firstItem="XIo-bE-EHZ" firstAttribute="centerX" secondItem="G5Z-bM-Y9J" secondAttribute="centerX" id="wRH-Lq-xAM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="homeFromCompleted" animates="NO" modalPresentationStyle="fullScreen" id="5o5-Ih-jOp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyr-uE-FIK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-578" y="1523"/>
+        </scene>
+        <!--Select View Controller-->
+        <scene sceneID="0pA-d2-OS6">
+            <objects>
+                <viewController id="zPN-x0-dMO" customClass="SelectViewController" customModule="VocalIntervalTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IBn-wc-UhU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhC-3w-LpI">
+                                <rect key="frame" x="20" y="0.0" width="79" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9QY-ru-b1n">
+                                <rect key="frame" x="20" y="49" width="374" height="749"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GnN-oa-TrR"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GnN-oa-TrR" firstAttribute="bottom" secondItem="9QY-ru-b1n" secondAttribute="bottom" constant="10" id="L91-JY-aCX"/>
+                            <constraint firstItem="GnN-oa-TrR" firstAttribute="trailing" secondItem="9QY-ru-b1n" secondAttribute="trailing" constant="20" id="RfC-VX-t7M"/>
+                            <constraint firstItem="9QY-ru-b1n" firstAttribute="leading" secondItem="GnN-oa-TrR" secondAttribute="leading" constant="20" id="fCW-no-Z8s"/>
+                            <constraint firstItem="jhC-3w-LpI" firstAttribute="leading" secondItem="GnN-oa-TrR" secondAttribute="leading" constant="20" id="mtC-T2-ENg"/>
+                            <constraint firstItem="jhC-3w-LpI" firstAttribute="top" secondItem="GnN-oa-TrR" secondAttribute="top" id="nEr-l1-SgX"/>
+                            <constraint firstItem="9QY-ru-b1n" firstAttribute="top" secondItem="jhC-3w-LpI" secondAttribute="bottom" constant="10" id="xZL-Wy-cO5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="audioTableView" destination="9QY-ru-b1n" id="dad-50-SIF"/>
+                        <outlet property="titleLabel" destination="jhC-3w-LpI" id="g2b-GM-82F"/>
+                        <segue destination="idq-8f-FKe" kind="presentation" identifier="closingAudioSelected" animates="NO" modalPresentationStyle="fullScreen" id="r43-de-7el"/>
+                        <segue destination="idq-8f-FKe" kind="presentation" identifier="midwayAudioSelected" animates="NO" modalPresentationStyle="fullScreen" id="WT2-nh-MdZ"/>
+                        <segue destination="idq-8f-FKe" kind="presentation" identifier="beginningAudioSelected" animates="NO" modalPresentationStyle="fullScreen" id="VY7-8p-MUX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUD-hQ-Ry0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="1523"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pPN-Zn-zij"/>
+        <segue reference="A5Q-RO-Ldp"/>
+        <segue reference="e0T-Jc-MYK"/>
+        <segue reference="s9g-ku-GCi"/>
+        <segue reference="zBE-pl-4SZ"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

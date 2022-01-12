@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D60F6043257D4B8B00164C89 /* Default.wav in Resources */ = {isa = PBXBuildFile; fileRef = D60F6042257D4B8B00164C89 /* Default.wav */; };
+		D613ED02257B242600728B35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613ED01257B242600728B35 /* AppDelegate.swift */; };
+		D613ED04257B242600728B35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613ED03257B242600728B35 /* SceneDelegate.swift */; };
+		D613ED06257B242600728B35 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613ED05257B242600728B35 /* HomeVC.swift */; };
+		D613ED09257B242600728B35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D613ED07257B242600728B35 /* Main.storyboard */; };
+		D613ED0C257B242600728B35 /* VocalIntervalTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D613ED0A257B242600728B35 /* VocalIntervalTimer.xcdatamodeld */; };
+		D613ED0E257B242700728B35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D613ED0D257B242700728B35 /* Assets.xcassets */; };
+		D613ED11257B242700728B35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D613ED0F257B242700728B35 /* LaunchScreen.storyboard */; };
+		D616E9CF257FB95400054907 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D616E9CE257FB95400054907 /* silence.mp3 */; };
+		D6415BBF258BE676008F8DDE /* CompletedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6415BBE258BE676008F8DDE /* CompletedVC.swift */; };
+		D6415BC2258BE6D9008F8DDE /* SavedRoutinesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6415BC1258BE6D9008F8DDE /* SavedRoutinesVC.swift */; };
+		D6415BC6258BE71D008F8DDE /* CreateRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6415BC5258BE71D008F8DDE /* CreateRoutine.swift */; };
+		D6415BCB258C40D4008F8DDE /* SavedRoutineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6415BC9258C40D4008F8DDE /* SavedRoutineTableViewCell.swift */; };
+		D6415BCC258C40D4008F8DDE /* SavedRoutineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6415BCA258C40D4008F8DDE /* SavedRoutineTableViewCell.xib */; };
+		D6415BCF258C4625008F8DDE /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6415BCE258C4625008F8DDE /* Templates.swift */; };
+		D6424312257BE49700318674 /* SelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6424311257BE49700318674 /* SelectVC.swift */; };
+		D6A6151A278F974F00522A26 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D6A61519278F974F00522A26 /* README.md */; };
+		D6AD30E1257B2E2200FF6B8C /* IntervalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD30DF257B2E2200FF6B8C /* IntervalsTableViewCell.swift */; };
+		D6AD30E2257B2E2200FF6B8C /* IntervalsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6AD30E0257B2E2200FF6B8C /* IntervalsTableViewCell.xib */; };
+		D6AD30E6257B2FB300FF6B8C /* AddIntervalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD30E5257B2FB300FF6B8C /* AddIntervalVC.swift */; };
+		D6AD30EA257B2FF000FF6B8C /* WorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD30E9257B2FF000FF6B8C /* WorkoutVC.swift */; };
+		D6AD30ED257B31B600FF6B8C /* Intervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD30EC257B31B600FF6B8C /* Intervals.swift */; };
+		D6AD30F0257B31CE00FF6B8C /* WOInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD30EF257B31CE00FF6B8C /* WOInterval.swift */; };
+		D6AD30F3257B38A300FF6B8C /* AudioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD30F2257B38A300FF6B8C /* AudioVC.swift */; };
+		D6AD30F7257B391500FF6B8C /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD30F5257B391500FF6B8C /* AudioTableViewCell.swift */; };
+		D6AD30F8257B391500FF6B8C /* AudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6AD30F6257B391500FF6B8C /* AudioTableViewCell.xib */; };
+		D6AD30FB257B3A2200FF6B8C /* AudioPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD30FA257B3A2200FF6B8C /* AudioPaths.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D60F6042257D4B8B00164C89 /* Default.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Default.wav; sourceTree = "<group>"; };
+		D613ECFE257B242600728B35 /* VocalIntervalTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocalIntervalTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D613ED01257B242600728B35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D613ED03257B242600728B35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D613ED05257B242600728B35 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		D613ED08257B242600728B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D613ED0B257B242600728B35 /* VocalIntervalTimer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VocalIntervalTimer.xcdatamodel; sourceTree = "<group>"; };
+		D613ED0D257B242700728B35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D613ED10257B242700728B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D613ED12257B242700728B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D616E9CE257FB95400054907 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
+		D6415BBE258BE676008F8DDE /* CompletedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedVC.swift; sourceTree = "<group>"; };
+		D6415BC1258BE6D9008F8DDE /* SavedRoutinesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRoutinesVC.swift; sourceTree = "<group>"; };
+		D6415BC5258BE71D008F8DDE /* CreateRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutine.swift; sourceTree = "<group>"; };
+		D6415BC9258C40D4008F8DDE /* SavedRoutineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRoutineTableViewCell.swift; sourceTree = "<group>"; };
+		D6415BCA258C40D4008F8DDE /* SavedRoutineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedRoutineTableViewCell.xib; sourceTree = "<group>"; };
+		D6415BCE258C4625008F8DDE /* Templates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
+		D6424311257BE49700318674 /* SelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectVC.swift; sourceTree = "<group>"; };
+		D6A61519278F974F00522A26 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D6AD30DF257B2E2200FF6B8C /* IntervalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalsTableViewCell.swift; sourceTree = "<group>"; };
+		D6AD30E0257B2E2200FF6B8C /* IntervalsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntervalsTableViewCell.xib; sourceTree = "<group>"; };
+		D6AD30E5257B2FB300FF6B8C /* AddIntervalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIntervalVC.swift; sourceTree = "<group>"; };
+		D6AD30E9257B2FF000FF6B8C /* WorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutVC.swift; sourceTree = "<group>"; };
+		D6AD30EC257B31B600FF6B8C /* Intervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intervals.swift; sourceTree = "<group>"; };
+		D6AD30EF257B31CE00FF6B8C /* WOInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOInterval.swift; sourceTree = "<group>"; };
+		D6AD30F2257B38A300FF6B8C /* AudioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVC.swift; sourceTree = "<group>"; };
+		D6AD30F5257B391500FF6B8C /* AudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
+		D6AD30F6257B391500FF6B8C /* AudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioTableViewCell.xib; sourceTree = "<group>"; };
+		D6AD30FA257B3A2200FF6B8C /* AudioPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPaths.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D613ECFB257B242600728B35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D613ECF5257B242600728B35 = {
+			isa = PBXGroup;
+			children = (
+				D6A61519278F974F00522A26 /* README.md */,
+				D613ED00257B242600728B35 /* VocalIntervalTimer */,
+				D613ECFF257B242600728B35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D613ECFF257B242600728B35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D613ECFE257B242600728B35 /* VocalIntervalTimer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D613ED00257B242600728B35 /* VocalIntervalTimer */ = {
+			isa = PBXGroup;
+			children = (
+				D613ED01257B242600728B35 /* AppDelegate.swift */,
+				D613ED03257B242600728B35 /* SceneDelegate.swift */,
+				D6AD30DE257B2DD700FF6B8C /* Model */,
+				D6AD30DD257B2DD100FF6B8C /* View */,
+				D6AD30DC257B2DC900FF6B8C /* Controller */,
+				D60F6042257D4B8B00164C89 /* Default.wav */,
+				D616E9CE257FB95400054907 /* silence.mp3 */,
+				D613ED0D257B242700728B35 /* Assets.xcassets */,
+				D613ED0F257B242700728B35 /* LaunchScreen.storyboard */,
+				D613ED12257B242700728B35 /* Info.plist */,
+				D613ED0A257B242600728B35 /* VocalIntervalTimer.xcdatamodeld */,
+			);
+			path = VocalIntervalTimer;
+			sourceTree = "<group>";
+		};
+		D6AD30DC257B2DC900FF6B8C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D613ED05257B242600728B35 /* HomeVC.swift */,
+				D6AD30E5257B2FB300FF6B8C /* AddIntervalVC.swift */,
+				D6424311257BE49700318674 /* SelectVC.swift */,
+				D6415BC5258BE71D008F8DDE /* CreateRoutine.swift */,
+				D6415BC1258BE6D9008F8DDE /* SavedRoutinesVC.swift */,
+				D6AD30E9257B2FF000FF6B8C /* WorkoutVC.swift */,
+				D6415BBE258BE676008F8DDE /* CompletedVC.swift */,
+				D6AD30F2257B38A300FF6B8C /* AudioVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6AD30DD257B2DD100FF6B8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D613ED07257B242600728B35 /* Main.storyboard */,
+				D6AD30F5257B391500FF6B8C /* AudioTableViewCell.swift */,
+				D6AD30F6257B391500FF6B8C /* AudioTableViewCell.xib */,
+				D6AD30DF257B2E2200FF6B8C /* IntervalsTableViewCell.swift */,
+				D6AD30E0257B2E2200FF6B8C /* IntervalsTableViewCell.xib */,
+				D6415BC9258C40D4008F8DDE /* SavedRoutineTableViewCell.swift */,
+				D6415BCA258C40D4008F8DDE /* SavedRoutineTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6AD30DE257B2DD700FF6B8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6AD30EC257B31B600FF6B8C /* Intervals.swift */,
+				D6AD30FA257B3A2200FF6B8C /* AudioPaths.swift */,
+				D6AD30EF257B31CE00FF6B8C /* WOInterval.swift */,
+				D6415BCE258C4625008F8DDE /* Templates.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D613ECFD257B242600728B35 /* VocalIntervalTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D613ED15257B242700728B35 /* Build configuration list for PBXNativeTarget "VocalIntervalTimer" */;
+			buildPhases = (
+				D613ECFA257B242600728B35 /* Sources */,
+				D613ECFB257B242600728B35 /* Frameworks */,
+				D613ECFC257B242600728B35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VocalIntervalTimer;
+			productName = VocalIntervalTimer;
+			productReference = D613ECFE257B242600728B35 /* VocalIntervalTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D613ECF6257B242600728B35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					D613ECFD257B242600728B35 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = D613ECF9257B242600728B35 /* Build configuration list for PBXProject "VocalIntervalTimer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D613ECF5257B242600728B35;
+			productRefGroup = D613ECFF257B242600728B35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D613ECFD257B242600728B35 /* VocalIntervalTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D613ECFC257B242600728B35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60F6043257D4B8B00164C89 /* Default.wav in Resources */,
+				D613ED11257B242700728B35 /* LaunchScreen.storyboard in Resources */,
+				D6415BCC258C40D4008F8DDE /* SavedRoutineTableViewCell.xib in Resources */,
+				D613ED0E257B242700728B35 /* Assets.xcassets in Resources */,
+				D6AD30E2257B2E2200FF6B8C /* IntervalsTableViewCell.xib in Resources */,
+				D613ED09257B242600728B35 /* Main.storyboard in Resources */,
+				D6A6151A278F974F00522A26 /* README.md in Resources */,
+				D6AD30F8257B391500FF6B8C /* AudioTableViewCell.xib in Resources */,
+				D616E9CF257FB95400054907 /* silence.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D613ECFA257B242600728B35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D613ED06257B242600728B35 /* HomeVC.swift in Sources */,
+				D613ED02257B242600728B35 /* AppDelegate.swift in Sources */,
+				D6AD30ED257B31B600FF6B8C /* Intervals.swift in Sources */,
+				D6424312257BE49700318674 /* SelectVC.swift in Sources */,
+				D6AD30E1257B2E2200FF6B8C /* IntervalsTableViewCell.swift in Sources */,
+				D6415BCF258C4625008F8DDE /* Templates.swift in Sources */,
+				D6415BCB258C40D4008F8DDE /* SavedRoutineTableViewCell.swift in Sources */,
+				D613ED0C257B242600728B35 /* VocalIntervalTimer.xcdatamodeld in Sources */,
+				D6415BBF258BE676008F8DDE /* CompletedVC.swift in Sources */,
+				D6AD30FB257B3A2200FF6B8C /* AudioPaths.swift in Sources */,
+				D6415BC6258BE71D008F8DDE /* CreateRoutine.swift in Sources */,
+				D613ED04257B242600728B35 /* SceneDelegate.swift in Sources */,
+				D6AD30EA257B2FF000FF6B8C /* WorkoutVC.swift in Sources */,
+				D6AD30F7257B391500FF6B8C /* AudioTableViewCell.swift in Sources */,
+				D6415BC2258BE6D9008F8DDE /* SavedRoutinesVC.swift in Sources */,
+				D6AD30F3257B38A300FF6B8C /* AudioVC.swift in Sources */,
+				D6AD30E6257B2FB300FF6B8C /* AddIntervalVC.swift in Sources */,
+				D6AD30F0257B31CE00FF6B8C /* WOInterval.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D613ED07257B242600728B35 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D613ED08257B242600728B35 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D613ED0F257B242700728B35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D613ED10257B242700728B35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D613ED13257B242700728B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D613ED14257B242700728B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D613ED16257B242700728B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8S94WGK4WQ;
+				INFOPLIST_FILE = VocalIntervalTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "Miles-Morlock.VIT";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D613ED17257B242700728B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8S94WGK4WQ;
+				INFOPLIST_FILE = VocalIntervalTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "Miles-Morlock.VocalIntervalTimer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D613ECF9257B242600728B35 /* Build configuration list for PBXProject "VocalIntervalTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D613ED13257B242700728B35 /* Debug */,
+				D613ED14257B242700728B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D613ED15257B242700728B35 /* Build configuration list for PBXNativeTarget "VocalIntervalTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D613ED16257B242700728B35 /* Debug */,
+				D613ED17257B242700728B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D613ED0A257B242600728B35 /* VocalIntervalTimer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D613ED0B257B242600728B35 /* VocalIntervalTimer.xcdatamodel */,
+			);
+			currentVersion = D613ED0B257B242600728B35 /* VocalIntervalTimer.xcdatamodel */;
+			path = VocalIntervalTimer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D613ECF6257B242600728B35 /* Project object */;
+}
